@@ -1,0 +1,484 @@
+/* styles.scss */
+/* Example: modern, performant typography setup */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@300;400;700&display=swap");
+:root {
+  --fs-base: 16px;
+  --scale-1: 1;
+  /* 16px */
+  --scale-2: 1.25;
+  /* 20px */
+  --scale-3: 1.5;
+  /* 24px */
+  --scale-4: 2;
+  /* 32px */
+}
+
+html {
+  font-size: var(--fs-base);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #0f172a;
+}
+
+body {
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: calc(var(--fs-base) * var(--scale-4));
+  line-height: 1.12;
+  font-weight: 700;
+  margin: 0 0 .6em;
+}
+
+h2 {
+  font-size: calc(var(--fs-base) * var(--scale-3));
+  font-weight: 600;
+  margin: 0 0 .5em;
+}
+
+h3 {
+  font-size: calc(var(--fs-base) * var(--scale-2));
+  font-weight: 600;
+  margin: 0 0 .5em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+/* code */
+code, pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  font-size: .95em;
+}
+
+body {
+  font-family: Merriweather;
+  background-color: whitesmoke;
+  color: #333;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar {
+  background-color: #001b02 !important;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+  margin: 0 10px;
+}
+
+.navbar .nav-link:hover {
+  color: orange !important;
+}
+
+.navbar .btn-warning {
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.btnport {
+  background: green;
+  color: white;
+}
+
+.hero-section {
+  background-color: #f5f5f5;
+}
+
+.hero-section .text-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-section .text-section .btn {
+  border-radius: 24px;
+  padding: 10px 20px;
+}
+
+.hero-section .image-section img {
+  max-width: 100%;
+  border: 8px solid #045a0a !important;
+  height: 400px;
+  padding: 10px;
+}
+
+.hero-section .badge {
+  font-size: 0.9rem;
+  background: orange;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+.services {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  width: 90%;
+  gap: 10px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.services .service-item {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 5px 15px;
+  background: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+  }
+  .hero-section .text-section,
+  .hero-section .image-section {
+    margin-top: 20px;
+  }
+}
+
+.card {
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-animation: fadeInUp 1s ease forwards;
+          animation: fadeInUp 1s ease forwards;
+  height: 20em;
+}
+
+.fade-in:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.fade-in:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.fade-in:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+@-webkit-keyframes fadeInUp {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.tools-section {
+  background-color: whitesmoke;
+}
+
+.tools-section h2 span:first-child {
+  color: #ffbe3b;
+  font-weight: 600;
+}
+
+.swiper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+.swiper .swiper-slide {
+  padding: 20px;
+  background: whitesmoke;
+  height: 15em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper .swiper-slide .tool-card {
+  background: white;
+  border-radius: 10%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.swiper .swiper-slide .tool-card img {
+  border-radius: 50%;
+  background: whitesmoke;
+  width: 120px;
+  padding: 10px;
+}
+
+.swiper .swiper-slide .tool-card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.swiper .swiper-slide .tool-card .tool-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.swiper .swiper-slide .tool-card .tool-percent {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.swiper .swiper-slide .tool-card .tool-names {
+  font-size: 18px;
+  color: blue;
+  font-weight: 100;
+}
+
+.card {
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-animation: fadeInUp 1s ease forwards;
+          animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.fade-in:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.fade-in:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #f4b400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+/* Remove hover effect from input fields */
+input.form-control:hover,
+select.form-select:hover,
+textarea.form-control:hover {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.card {
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-animation: fadeInUp 1s ease forwards;
+          animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.fade-in:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.fade-in:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #f4b400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 40px 20px;
+  border-top: 1px solid #ddd;
+}
+
+.footer h5 {
+  color: #f7a600;
+  font-weight: bold;
+}
+
+.social-icons a {
+  font-size: 15px;
+  color: #000;
+  background-color: orange;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.btn-blog {
+  background-color: #1e3d26;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+}
+
+.btn-blog i {
+  margin-left: 10px;
+}
+
+.subscribe-input {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.subscribe-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #1e3d26;
+  color: white;
+}
+
+.footer-bottom {
+  background-color: #1e3d26;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.brand-name {
+  color: #f7a600;
+}
+/*# sourceMappingURL=home.css.map */

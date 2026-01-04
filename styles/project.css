@@ -1,0 +1,150 @@
+.container-projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    gap: 2em;
+}
+
+.project img{
+    width: 100%;
+    height: 290px;
+    border-radius: 5px;
+}
+.project .project-detail2{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+   gap: 10px;
+}
+.project .project-detail2 button{
+    width: fit-content;
+    padding: 10px 40px;
+    border-radius: 7px;
+    background: #000;
+    border: none;
+    color: white;
+    display: flex;
+    align-self: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+/* .myProjectSwiper{
+    background: green;
+    height: fit-content;
+} */
+      :root{
+  --card-w: 400px;
+  --card-h: 500px;
+  --tilt-amount: 12deg; /* max rotation */
+  --shadow-y: 18px;
+}
+*{box-sizing:border-box}
+.cards{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  padding:40px;
+  flex-wrap:wrap;
+}
+.card3{
+  width:var(--card-w);
+  height:var(--card-h);
+  /* margin-top: 10px; */
+  perspective:1000px; 
+}
+.card__surface{
+  width:100%;
+  height:100%;
+  border-radius:12px;
+  background:linear-gradient(180deg,#ffffff,#f3f4f6);
+  box-shadow:0 8px 24px rgba(16,24,40,0.12);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transition:box-shadow .22s ease, transform .12s ease;
+  transform-style:preserve-3d;
+  will-change:transform;
+  /* padding:20px; */
+}
+.card:focus .card__surface{ outline-offset:4px; }
+@media (prefers-reduced-motion: reduce){
+  .card__surface{ transition:none; will-change:auto; }
+}
+
+/* faqs */
+ /* CSS: styling + animated height. respects reduced motion */
+.faq { max-width: 800px; margin: 2rem auto; font-family: system-ui, Arial; 
+padding: 2em;}
+.faq-toggle {
+  width: 100%; text-align: left; padding: 1rem; background: #0f172a; color: #fff;
+  border: none; display:flex; justify-content:space-between; align-items:center; cursor:pointer;
+  font-size:1rem; border-radius:8px;
+}
+.faq-toggle:focus { outline: 3px solid #93c5fd; outline-offset:3px; }
+.faq-panel {
+  overflow: hidden;
+  transition: height 320ms cubic-bezier(.2,.8,.2,1), opacity 220ms ease;
+  height: 0; opacity: 0; background: #0b1220; color: #e6eef8; padding: 0 1rem; border-radius: 0 0 8px 8px;
+}
+.faq-panel p { margin: .75rem 0; }
+.faq-item + .faq-item { margin-top: .75rem; }
+
+/* rotate chevron */
+.faq-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); transition: transform 200ms; }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .faq-panel { transition: none; }
+  .faq-toggle, .faq-toggle .chev { transition: none; }
+}
+
+  :root {
+  --dur: 420ms;
+  --ease: cubic-bezier(.22,.9,.28,1);
+}
+
+.project-card { transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease); }
+.project-card:hover, .project-card:focus-within { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+
+.modal-backdrop {
+  position: fixed; inset: 0; display: grid; place-items: center;
+  background: rgba(0,0,0,.5); opacity: 0; pointer-events: none;
+  transition: opacity var(--dur) var(--ease);
+}
+.modal-backdrop[open] { opacity: 1; pointer-events: auto; }
+
+.project-detail {
+  width: min(80vw, 95vw); max-height: 90vh; overflow: auto;
+  background: whitesmoke; border-radius: 8px; padding: 1.25rem;
+  transform: translateY(8px); opacity: 0;
+  transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+}
+.modal-backdrop[open] .project-detail { transform: none; opacity: 1; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+.media img { width: 100%; height: auto; display: block; }
+.links{
+  display: flex;
+  gap: 20px;
+}
+.links a{
+  text-decoration: none;
+  color: white;
+  background: navy;
+  border-radius: 10px;
+  padding: 10px 20px ;
+}
+
+.scrollable-container-class::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+.scrollable { scrollbar-width: none; }
