@@ -7,15 +7,22 @@
 }
 
 .project img{
-    width: 100%;
-    height: 290px;
+    width: 350px;
+    height: 50%;
     border-radius: 5px;
+}
+.project{
+    height: 100%;
 }
 .project .project-detail2{
     padding: 10px;
     display: flex;
+    height: 50%;
+    gap: 1em;
     flex-direction: column;
-   gap: 10px;
+}
+.project .project-detail2 p{
+    height: 6em;
 }
 .project .project-detail2 button{
     width: fit-content;
@@ -36,8 +43,8 @@
     height: fit-content;
 } */
       :root{
-  --card-w: 400px;
-  --card-h: 500px;
+  --card-w: 350px;
+  --card-h: 550px;
   --tilt-amount: 12deg; /* max rotation */
   --shadow-y: 18px;
 }
@@ -52,8 +59,9 @@
 .card3{
   width:var(--card-w);
   height:var(--card-h);
+  padding: 0px;
   /* margin-top: 10px; */
-  perspective:1000px; 
+  /* perspective:1000px;  */
 }
 .card__surface{
   width:100%;
